@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevilin 💖</title>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe0ec, #ffffff);
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #sim {
+      background-color: #d63384;
+      color: white;
+    }
+
+    #nao {
+      background-color: #f1f1f1;
+      color: #333;
+      position: absolute;
+    }
+
+    #resposta {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #d63384;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Kevilin 💖</h1>
+  <img src="foto.kv.jpg" alt="Foto da Kevilin">
+  <p>Sei que hoje não está sendo fácil, mas quero que saiba que você não está sozinha.</p>
+  <p>Seu sorriso tem o poder de acalmar até os dias mais difíceis.</p>
+  <p>Estou aqui, torcendo para que seu coração se sinta mais leve logo.</p>
+
+  <h2>Me dá um beijo? 😳</h2>
+
+  <div class="buttons">
+    <button id="sim">Sim 😘</button>
+    <button id="nao">Não 🙈</button>
+  </div>
+
+  <div id="resposta"></div>
+
+  <script>
+    const botaoSim = document.getElementById("sim");
+    const botaoNao = document.getElementById("nao");
+    const resposta = document.getElementById("resposta");
+
+    botaoSim.addEventListener("click", () => {
+      resposta.innerText = "Vai ser quando a gente for assistir um filme juntinhos 🎬💋";
+    });
+
+    botaoNao.addEventListener("mouseover", () => {
+      const larguraJanela = window.innerWidth - botaoNao.offsetWidth;
+      const alturaJanela = window.innerHeight - botaoNao.offsetHeight;
+
+      const novaPosicaoX = Math.random() * larguraJanela;
+      const novaPosicaoY = Math.random() * alturaJanela;
+
+      botaoNao.style.left = novaPosicaoX + "px";
+      botaoNao.style.top = novaPosicaoY + "px";
+    });
+  </script>
+
+</body>
+</html>
